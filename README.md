@@ -1,1 +1,1 @@
-# linqpad-queries
+# LINQPad Queries, Extensions, and Snippets
