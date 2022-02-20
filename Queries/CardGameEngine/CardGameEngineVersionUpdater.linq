@@ -4,7 +4,7 @@
   <RuntimeVersion>6.0</RuntimeVersion>
 </Query>
 
-#load "CardGameEngine\QuarantaNugetPackageUpdater.linq"
+#load "CardGameEngine\CardGameEnginePackageUpdater.linq"
 
 bool hasIncrementedSinceLastApply = false;
 string projectFileContent = string.Empty;
@@ -92,6 +92,7 @@ private void ResetVersionNumbers()
 
 private void ApplyChangeToQuaranta()
 {
+	Thread.Sleep(2000);
 	UpdateQuarantaNugetPackageReference();
 	BuildCardGameEngine();
 }
