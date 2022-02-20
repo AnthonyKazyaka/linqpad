@@ -31,7 +31,7 @@ void Main()
 	revision = int.Parse(versionMatch.Groups["revision"].Value);
 	
 	var newVersionText = () => $"{major}.{minor}.{revision}";
-	var versionProjectText = () => $"CardGameEngine.{newVersionText()}";
+	var versionProjectText = () => $"{(hasIncrementedSinceLastApply ? "New" : "Current")} version is CardGameEngine.{newVersionText()}";
 	
 	Label versionLabel;
 	var dumpContainer =
