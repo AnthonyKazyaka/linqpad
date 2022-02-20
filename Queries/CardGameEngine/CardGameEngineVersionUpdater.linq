@@ -61,7 +61,7 @@ private void UpdateProjectVersion(string version)
 	}
 	
 	UpdateProjectFileContents(version);
-	
+	BuildCardGameEngine();
 }
 
 private void UpdateProjectFileContents(string version)
@@ -92,9 +92,7 @@ private void ResetVersionNumbers()
 
 private void ApplyChangeToQuaranta()
 {
-	Thread.Sleep(2000);
 	UpdateQuarantaNugetPackageReference();
-	BuildCardGameEngine();
 }
 
 private void BuildCardGameEngine()
